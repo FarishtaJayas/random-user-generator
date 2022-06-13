@@ -5,7 +5,9 @@ const app = Vue.createApp({
             firstName: 'John',
             lastName: 'Doe',
             email: 'john@gmail.com',
+            phone: '0112801 983 7819',
             gender: 'male',
+            city: 'Dhaka',
             picture: 'https://randomuser.me/api/portraits/men/10.jpg'
 
         }
@@ -24,7 +26,9 @@ const app = Vue.createApp({
             this.lastName = results[0].name.last
             this.email = results[0].email
             this.gender = results[0].gender
+            this.city = results[0].location.city
             this.picture = results[0].picture.large
+            this.phone = results[0].phone
         }
     } 
 })
